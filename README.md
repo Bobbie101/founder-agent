@@ -9,9 +9,7 @@ Team: [@wolfworldrun](https://github.com/wolfworldrun) · [@Bobbie101](https://g
 
 ## What It Does
 
-You describe your business idea. The agent does the heavy lifting — searching real market data, storing your progress, generating documents, and walking you step by step from "I have an idea" to "I'm ready to pitch."
-
-It doesn't give generic advice. It thinks like a mentor — blending the frameworks of **Steve Jobs** (clarity and craft), **Elon Musk** (first principles and urgency), and **Bill Gates** (systems and market reality).
+The user can discuss their business idea with the agent, as if talking to an experienced mentor. The agent will provide direct constructive feedback, market data, a checkpoint progress tracker, generate documents, and most importantly walk the user through processes step by step. The goal is to gear the user towards pitch-ready.
 
 ---
 
@@ -20,15 +18,15 @@ It doesn't give generic advice. It thinks like a mentor — blending the framewo
 | Step | Feature | Status |
 |------|---------|--------|
 | 1 | Idea intake + timestamped profile | ✅ |
-| 2 | Launch mentality coaching (YC framework) | ✅ |
-| 3 | Idea clarity — one sentence, one customer, one problem | ✅ |
-| 4 | Do things that don't scale — get first 10 customers manually | ✅ |
-| 5 | Customer discovery — 5 sharp interview questions | ✅ |
+| 2 | Launch mentality coaching (YCombinator framework) | ✅ |
+| 3 | Idea clarity: one sentence, one customer, one problem | ✅ |
+| 4 | Action: Do things that don't scale, get first 10 customers manually | ✅ |
+| 5 | Customer discovery: 5 sharp interview questions | ✅ |
 | 6 | Idea protection checklist | ✅ |
-| 7 | Market validation — real data via Google Search | ✅ |
+| 7 | Market validation: real data via Google sources | ✅ |
 | 8 | Legal setup roadmap by country | ✅ |
 | 9 | Investor readiness score (0–100 algorithm) | ✅ |
-| 10 | PIN-secured profile resume via sidebar keypad | ✅ |
+| 10 | PIN-secured profile | ✅ |
 | 11 | Progress tracker with milestone ring | ✅ |
 | 12 | Notes and resource saving | ✅ |
 
@@ -161,9 +159,9 @@ npx -y mongodb-mcp-server setup
 
 The agent blends three frameworks:
 
-- **Steve Jobs** — Obsessed with simplicity. If it can't be said in one sentence, it isn't ready. Pushes for what makes something *insanely great*.
-- **Elon Musk** — First principles thinking. Strips every assumption. "But WHY is it done that way?"
-- **Bill Gates** — Market reality and systems. Data-driven. "Your most unhappy customers are your greatest source of learning."
+- **Innovative** — Obsessed with simplicity. If it can't be said in one sentence, it isn't ready. Pushes for what makes something *insanely great*.
+- **Strategic** — First principles thinking. Strips every assumption. "But WHY is it done that way?"
+- **Intuitive** — Market reality and systems. Data-driven. "Your most unhappy customers are your greatest source of learning."
 
 ---
 

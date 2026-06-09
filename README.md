@@ -1,5 +1,7 @@
 # 🚀 First-Time Founder Agent
 
+🌐 **Live Demo:** https://founder-agent-nuf3w4vtla-uc.a.run.app
+
 > The mentor every first-time founder never had.
 
 Built for the **Google Cloud Rapid Agent Hackathon** · MongoDB Partner Track  
@@ -42,6 +44,7 @@ The user can discuss their business idea with the agent, as if talking to an exp
 | DB Dev Layer | MongoDB MCP Server (Claude Code) |
 | Search | Google Search tool (via ADK sub-agent) |
 | Backend | Python + Flask |
+| Hosting | Google Cloud Run (us-central1) |
 | Frontend | HTML + CSS + Vanilla JS |
 | Auth | SHA-256 hashed PIN per founder profile |
 
@@ -133,6 +136,19 @@ PYTHONPATH=src python src/app.py
 Open [http://localhost:5000](http://localhost:5000)
 
 ---
+
+### 5. Deploy to Cloud Run
+
+```bash
+gcloud builds submit --tag gcr.io/your-project-id/founder-agent
+gcloud run deploy founder-agent \
+  --image gcr.io/your-project-id/founder-agent \
+  --platform managed \
+  --region us-central1 \
+  --allow-unauthenticated \
+  --set-env-vars GOOGLE_GENAI_USE_VERTEXAI=true,GOOGLE_CLOUD_PROJECT=your-project-id,GOOGLE_CLOUD_LOCATION=us-central1 \
+  --set-secrets MONGODB_URI=mongodb-uri:latest,FLASK_SECRET=flask-secret:latest
+```
 
 ## MongoDB Collections
 

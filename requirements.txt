@@ -1,3 +1,5 @@
 google-adk
 pymongo
 python-dotenv
+flask
+mcp

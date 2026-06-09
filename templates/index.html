@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Founder Agent — Your Startup Mentor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Ambient background -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <div class="app-shell">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-mark">FA</span>
+        <span class="logo-text">Founder Agent</span>
+      </div>
+
+      <div class="sidebar-tagline">
+        Your mentor.<br>Your roadmap.<br>Your unfair advantage.
+      </div>
+
+      <!-- Progress ring -->
+      <div class="score-ring-wrap">
+        <svg class="score-ring" viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="50"/>
+          <circle class="ring-fill" cx="60" cy="60" r="50" id="ringFill"/>
+        </svg>
+        <div class="score-center">
+          <span class="score-number" id="scoreNumber">0</span>
+          <span class="score-label">/ 100</span>
+        </div>
+      </div>
+      <p class="score-caption">Investor Readiness</p>
+
+      <!-- Milestones -->
+      <nav class="milestones">
+        <p class="milestones-title">Your Journey</p>
+        <ul>
+          <li class="milestone" data-key="idea_clarity">
+            <span class="m-dot"></span>
+            <span class="m-label">Idea Clarity</span>
+          </li>
+          <li class="milestone" data-key="idea_protected">
+            <span class="m-dot"></span>
+            <span class="m-label">Idea Protected</span>
+          </li>
+          <li class="milestone" data-key="market_validated">
+            <span class="m-dot"></span>
+            <span class="m-label">Market Validated</span>
+          </li>
+          <li class="milestone" data-key="customer_discovery">
+            <span class="m-dot"></span>
+            <span class="m-label">Customer Discovery</span>
+          </li>
+          <li class="milestone" data-key="legal_setup">
+            <span class="m-dot"></span>
+            <span class="m-label">Legal Setup</span>
+          </li>
+          <li class="milestone" data-key="investor_ready">
+            <span class="m-dot"></span>
+            <span class="m-label">Investor Ready</span>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <input class="founder-lookup" id="founderLookup" placeholder="Enter your name to resume" />
+        <button class="btn-lookup" onclick="lookupFounder()">Resume →</button>
+      </div>
+    </aside>
+
+    <!-- ── Main chat ── -->
+    <main class="chat-panel">
+
+      <header class="chat-header">
+        <div class="header-left">
+          <h1 class="chat-title">Your Startup Mentor</h1>
+          <p class="chat-subtitle">Describe your idea — I'll tell you exactly what to do next.</p>
+        </div>
+        <div class="session-badge" id="sessionBadge">New Session</div>
+      </header>
+
+      <div class="messages" id="messages">
+        <!-- Welcome message -->
+        <div class="message agent-message">
+          <div class="message-avatar">FA</div>
+          <div class="message-body">
+            <p>Hey — I'm your Founder Agent. I've helped founders go from a rough idea to investor-ready, and I won't sugarcoat a thing.</p>
+            <p>Tell me your name and describe your business idea. That's it. I'll take it from there.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="message-avatar small">FA</div>
+        <div class="typing-dots">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <textarea
+          id="userInput"
+          class="chat-input"
+          placeholder="Describe your idea, ask a question, or say your name to get started..."
+          rows="1"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </div>
+
+      <p class="input-hint">Press Enter to send · Shift+Enter for new line</p>
+    </main>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

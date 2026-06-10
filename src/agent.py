@@ -193,15 +193,15 @@ root_agent = Agent(
     save_resource,
     get_notes_and_resources,
     MCPToolset(
-        connection_params=StdioConnectionParams(
-            server_params=StdioServerParameters(
-                command="npx",
-                args=["-y", "mongodb-mcp-server"],
-                env={
-                    "MDB_MCP_CONNECTION_STRING": os.getenv("MONGODB_URI")
-                }
-            )
+    connection_params=StdioConnectionParams(
+        server_params=StdioServerParameters(
+            command="mongodb-mcp-server",
+            args=[],
+            env={
+                "MDB_MCP_CONNECTION_STRING": os.getenv("MONGODB_URI")
+            }
         )
     )
+)
 ],
 )
